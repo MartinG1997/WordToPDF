@@ -1,4 +1,6 @@
-﻿namespace WordToPDF;
+﻿using System.Diagnostics;
+
+namespace WordToPDF;
 
 class Program
 {
@@ -51,7 +53,7 @@ class Program
         //rename pdf file
         string archivoOriginal = Path.Combine(outputFolder, Path.GetFileNameWithoutExtension(docxPath) + ".pdf");
         string archivoRenombrado = Path.Combine(outputFolder, "nuevoNombre.pdf");
-        
+
         if (File.Exists(archivoOriginal))
         {
             File.Move(archivoOriginal, archivoRenombrado);
